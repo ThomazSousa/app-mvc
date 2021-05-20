@@ -14,10 +14,10 @@ steps:
     command: restore
     projects: '$(Parameters.RestoreBuildProjects)'
 
+
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
-    command: 'build'
     projects: '**/*.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
