@@ -14,7 +14,7 @@ steps:
     command: restore
     feedsToUse: 'select'
     feedRestore: 'projectName/feedName'
-    projects: '$(Parameters.RestoreBuildProjects)'
+    projects: '**/*.csproj'
 
 
 - task: DotNetCoreCLI@2
