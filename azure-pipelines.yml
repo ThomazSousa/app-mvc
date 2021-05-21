@@ -40,4 +40,4 @@ steps:
     containerRegistry: 'DockerRegistryTom'
     repository: 'Repositoriotom'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
