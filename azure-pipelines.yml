@@ -34,3 +34,10 @@ steps:
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
   condition: succeededOrFailed()
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'DockerRegistryTom'
+    repository: 'Repositoriotom'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
